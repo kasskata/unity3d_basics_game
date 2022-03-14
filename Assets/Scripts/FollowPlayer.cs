@@ -2,8 +2,9 @@
 
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject plane;
+    public Transform target;
     public Vector3 offset;
+    public float smoothSpeed = 0.125f;
 
     // Start is called before the first frame update
     void Start()
@@ -12,8 +13,10 @@ public class FollowPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = plane.transform.position + offset;
+        var desiredPosition = target.TransformPoint(offset);
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        transform.LookAt(target);
     }
 }

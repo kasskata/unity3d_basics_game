@@ -1,5 +1,6 @@
-4. Create material with standart shader. Apply "Assets/Models/_Source_Files/Textures/SimpleAirport.png" to it and apply it to plane model.
-1. Fix the plane's script and make it fly correctly.
-2. Fix the play mode errors.
-3. Use up/down arrows to tilt the nose of the plane up and down.
-5. Make the plane's propeller rotate. HINT: https://docs.unity3d.com/ScriptReference/Transform.Rotate.html
+1. Add input logic into PlayerController.cs script to fly the plane horizontally.
+2. Add input logic into Playercontroller.cs script on Q and E keys to roll the plane by Z axis.
+3. In FollowPlayer.cs script create "smooth follow camera logic". See https://www.youtube.com/watch?v=MFQhpwc6cKE for more info.
+4. Create and attach new script which will "drop" a gameobject from the plane when press a spacebar.
+5. Create a new script and attach it to that cloned object. The script will translate the object down like it's falling.
+6. Destroy the clonned object after 5 seconds.
