@@ -1,0 +1,5 @@
+4. Create material with standart shader. Apply "Assets/Models/_Source_Files/Textures/SimpleAirport.png" to it and apply it to plane model.
+1. Fix the plane's script and make it fly correctly.
+2. Fix the play mode errors.
+3. Use up/down arrows to tilt the nose of the plane up and down.
+5. Make the plane's propeller rotate. HINT: https://docs.unity3d.com/ScriptReference/Transform.Rotate.html
