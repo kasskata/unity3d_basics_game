@@ -17,7 +17,7 @@ public class Gate : MonoBehaviour
     /// Cached gameObject of this Gate. Saves a lot of redundant operations.
     /// </summary>
     public GameObject GameObject { get; set; }
-    
+
     /// <summary>
     /// Cached transform of this Gate. Saves a lot of redundant operations.
     /// </summary>
@@ -43,7 +43,10 @@ public class Gate : MonoBehaviour
     {
         leftBurnSound.Pause();
         rightBurnSound.Pause();
-        StopCoroutine(disableCoroutine);
+        if (disableCoroutine != null)
+        {
+            StopCoroutine(disableCoroutine);
+        }
     }
 
     // When the object is active, we have Update loop.
